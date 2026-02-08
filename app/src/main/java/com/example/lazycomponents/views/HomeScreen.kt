@@ -65,9 +65,11 @@ fun HomeScreen(
                 .fillMaxSize()
                 .padding(
                     top = 8.dp,
-                    bottom = 35.dp
-                    ),
-            horizontalArrangement = Arrangement.spacedBy(screenPadding / 2)
+                    bottom = 35.dp,
+                    start = screenPadding * 5f, // ← AÑADE padding izquierdo
+                    end = screenPadding * 5f// ← AÑADE padding derecho
+                ),
+            horizontalArrangement = Arrangement.spacedBy(screenPadding * 5f)
         ) {
             // Buscar 40%
             Column(
@@ -177,9 +179,11 @@ fun HomeScreen(
                 .fillMaxSize()
                 .padding(
                     top = 8.dp,
-                    bottom = 35.dp
+                    bottom = 35.dp,
+                    start = screenPadding * 5f, // ← AÑADE padding izquierdo
+                    end = screenPadding * 5f// ← AÑADE padding derecho
                 ),
-            horizontalArrangement = Arrangement.spacedBy(screenPadding / 2)
+            horizontalArrangement = Arrangement.spacedBy(screenPadding * 5f)
         ) {
             // Columna izquierda: Búsqueda y Top 10
             Column(
