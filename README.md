@@ -62,11 +62,11 @@ com.example.lazycomponents/
 ## Capturas de Pantalla
 | Pantalla Principal | Resulatdo de la búsqueda | Pantalla de Canciones Favoritas |
 |-------------------|-----------------|-----------------|
-| ![HomeScreenV](screenshots/HomeScreenV.png) | ![SearchResultV](screenshots/SearchResultV.png) |![FavoriteSongsV](screenshots/FavoriteSongsV.png) |
+| ![HomeScreenV](app/src/main/java/com/example/lazycomponents/assets/HomeScreenV.png) | ![SearchResultV](app/src/main/java/com/example/lazycomponents/assets/SearchResultV.png) |![FavoritesSongsV](app/src/main/java/com/example/lazycomponents/assets/FavoritesSongsV.png) |
 
 | Pantalla Principal | Resulatdo de la búsqueda | Pantalla de Canciones Favoritas |
 |-------------------|-----------------|-----------------|
-| ![HomeScreenH](screenshots/HomeScreenH.png) | ![SearchResultH](screenshots/SearchResultH.png) |![FavoriteSongsH](screenshots/FavoriteSongsH.png) |
+| ![HomeScreenH](app/src/main/java/com/example/lazycomponents/assets/HomeScreenH.png) | ![SearchResultH](app/src/main/java/com/example/lazycomponents/assets/SearchResultH.png) |![FavoritesSongsH](app/src/main/java/com/example/lazycomponents/assets/FavoritesSongsH.png) |
 
 ## Base de Datos Local
 ### Entidad Song
