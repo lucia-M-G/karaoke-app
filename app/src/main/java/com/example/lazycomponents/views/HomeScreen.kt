@@ -62,7 +62,11 @@ fun HomeScreen(
         // Horizontal
         Row(
             modifier = Modifier
-                .fillMaxSize(),
+                .fillMaxSize()
+                .padding(
+                    top = 8.dp,
+                    bottom = 35.dp
+                    ),
             horizontalArrangement = Arrangement.spacedBy(screenPadding / 2)
         ) {
             // Buscar 40%
@@ -170,7 +174,11 @@ fun HomeScreen(
         // Horizontal
         Row(
             modifier = Modifier
-                .fillMaxSize(),
+                .fillMaxSize()
+                .padding(
+                    top = 8.dp,
+                    bottom = 35.dp
+                ),
             horizontalArrangement = Arrangement.spacedBy(screenPadding / 2)
         ) {
             // Columna izquierda: Búsqueda y Top 10
@@ -180,14 +188,6 @@ fun HomeScreen(
                     .fillMaxHeight(),
                 verticalArrangement = Arrangement.spacedBy(screenPadding)
             ) {
-                Text(
-                    text = "Karaoke App",
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.padding(bottom = screenPadding / 2)
-                )
-
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                     verticalArrangement = Arrangement.spacedBy(screenPadding / 2)
@@ -354,13 +354,6 @@ fun HomeScreen(
                 .padding(screenPadding),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = "Karaoke App",
-                fontSize = getAdaptativeFontSize(getScreenSize(), 28).sp,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary
-            )
-
             Spacer(modifier = Modifier.height(screenPadding))
 
             OutlinedTextField(
