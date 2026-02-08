@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterial3Api::class)
+
 package com.example.lazycomponents.nav
 
 import androidx.compose.foundation.background
@@ -7,6 +9,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -31,6 +34,7 @@ import com.example.lazycomponents.views.FavoritesScreen
 import com.example.lazycomponents.views.HomeScreen
 import com.example.lazycomponents.viewmodel.KaraokeViewModel
 import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.ui.platform.LocalContext
 
 // Rutas para evitar líos
 private object Routes {
@@ -38,7 +42,6 @@ private object Routes {
     const val FAVORITES = "favorites"
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppNavigation(viewModel: KaraokeViewModel) {
     val navController = rememberNavController()
@@ -81,7 +84,32 @@ fun MobilePortraitLayout(
     navController: NavHostController,
     padding: Dp
 ) {
+    val context = LocalContext.current
+
     Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        "Karaoke App",
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onPrimary
+                    )
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                actions = {
+                    Icon(
+                        imageVector = Icons.Default.Share,
+                        contentDescription = "Compartir canción",
+                        tint = MaterialTheme.colorScheme.onPrimary
+                    )
+                }
+            )
+        },
         bottomBar = {
             NavigationBar {
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -146,7 +174,35 @@ fun MobileLandscapeLayout(
     padding: Dp
 ) {
     val bottomBarHeight = 56.dp
+    val context = LocalContext.current
+
     Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        "Karaoke App",
+                        fontSize = 18.sp, // Más pequeño en landscape
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onPrimary
+                    )
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                actions = {
+                    Icon(
+                        imageVector = Icons.Default.Share,
+                        contentDescription = "Compartir canción",
+                        tint = MaterialTheme.colorScheme.onPrimary,
+                        modifier = Modifier.size(20.dp)
+                    )
+                },
+
+                modifier = Modifier.height(48.dp) // Más compacto en landscape
+            )
+        },
         bottomBar = {
             // BottomBar personalizada
             Surface(
