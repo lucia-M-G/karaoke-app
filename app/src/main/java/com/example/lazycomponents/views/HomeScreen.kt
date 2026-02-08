@@ -528,7 +528,7 @@ fun TopSongItem(
                     style = if (isCompact) MaterialTheme.typography.bodyMedium
                     else MaterialTheme.typography.titleMedium,
                     fontWeight = if (isCompact) FontWeight.Medium else FontWeight.Bold,
-                    maxLines = 1,  // Siempre 1 línea para ambos
+                    maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
 
