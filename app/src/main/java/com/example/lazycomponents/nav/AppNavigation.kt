@@ -174,7 +174,7 @@ fun MobileLandscapeLayout(
     padding: Dp
 ) {
     val bottomBarHeight = 56.dp
-    val context = LocalContext.current
+    val landscapePadding = padding * 0.2f
 
     Scaffold(
         topBar = {
@@ -317,7 +317,7 @@ fun MobileLandscapeLayout(
             top = innerPadding.calculateTopPadding(),
             start = innerPadding.calculateStartPadding(LayoutDirection.Ltr),
             end = innerPadding.calculateEndPadding(LayoutDirection.Ltr),
-            bottom = 25.dp
+            bottom = 8.dp
         )
 
         NavHost(
@@ -328,7 +328,7 @@ fun MobileLandscapeLayout(
             composable(Routes.HOME) {
                 HomeScreen(
                     viewModel = viewModel,
-                    screenPadding = padding
+                    screenPadding = landscapePadding
                 )
             }
             composable(Routes.FAVORITES) {

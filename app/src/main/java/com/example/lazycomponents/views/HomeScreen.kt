@@ -62,8 +62,7 @@ fun HomeScreen(
         // Horizontal
         Row(
             modifier = Modifier
-                .fillMaxSize()
-                .padding(bottom = 25.dp),
+                .fillMaxSize(),
             horizontalArrangement = Arrangement.spacedBy(screenPadding / 2)
         ) {
             // Buscar 40%
@@ -171,8 +170,7 @@ fun HomeScreen(
         // Horizontal
         Row(
             modifier = Modifier
-                .fillMaxSize()
-                .padding(bottom = 25.dp),
+                .fillMaxSize(),
             horizontalArrangement = Arrangement.spacedBy(screenPadding / 2)
         ) {
             // Columna izquierda: Búsqueda y Top 10
@@ -470,6 +468,7 @@ fun HomeScreen(
                     text = "Top 10 hits en iTunes",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary,
                     fontSize = getAdaptativeFontSize(getScreenSize(), 20).sp
                 )
                 Spacer(modifier = Modifier.height(screenPadding / 2))
