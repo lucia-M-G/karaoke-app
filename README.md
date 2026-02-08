@@ -62,8 +62,11 @@ com.example.lazycomponents/
 ## Capturas de Pantalla
 | Pantalla Principal | Resulatdo de la búsqueda | Pantalla de Canciones Favoritas |
 |-------------------|-----------------|-----------------|
-| ![HomeScreen](screenshots/HomeScreen.png) | ![SearchResult](screenshots/SearchResult.png) |![FavoriteSongs](screenshots/FavoriteSongs.png) |
+| ![HomeScreenV](screenshots/HomeScreenV.png) | ![SearchResultV](screenshots/SearchResultV.png) |![FavoriteSongsV](screenshots/FavoriteSongsV.png) |
 
+| Pantalla Principal | Resulatdo de la búsqueda | Pantalla de Canciones Favoritas |
+|-------------------|-----------------|-----------------|
+| ![HomeScreenH](screenshots/HomeScreenH.png) | ![SearchResultH](screenshots/SearchResultH.png) |![FavoriteSongsH](screenshots/FavoriteSongsH.png) |
 
 ## Base de Datos Local
 ### Entidad Song
